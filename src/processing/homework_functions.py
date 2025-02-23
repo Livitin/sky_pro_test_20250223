@@ -1,13 +1,13 @@
 from datetime import datetime
 
 
-def filter_by_state(passed_lists: list[dict], state: str = 'EXECUTED') -> list:
+def filter_by_state(passed_lists: list[dict], state: str = 'EXECUTED') -> list[dict]:
     '''Функция принимает на вход список словарей с данными о банковских операциях и параметр
     state , возвращает новый список, содержащий только те словари, у которых ключ state
     содержит переданное в функцию значение'''
     result = []
     for tmp_list in passed_lists:
-        if state in tmp_list and tmp_list['state'] == state:
+        if 'state' in tmp_list and tmp_list['state'] == state:
             result.append(tmp_list)
     return result
 
