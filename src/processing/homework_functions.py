@@ -15,6 +15,11 @@ def sort_by_date(passed_lists: list, sort_by_date_forward:bool = 'True') -> list
     '''Функция принимает на вход список словарей и параметр порядка сортировки,
     возвращает новый список, в котором исходные словари отсортированы по дате.
     Порядок направления сортировки по умолчанию True'''
-    result = []
-    tmp_date:datetime = datetime.now()
-    list_index =
+
+    '''Промежуточная функция возвращающая дату. Без обработки исключений.
+    Считаем, что все даты - корректны.'''
+    def get_sort_key(passed_list: list):
+        return datetime.strptime(passed_list['date'], '%Y-%m-%dT%H:%M:%S.%f')
+
+    return sorted(passed_lists, key=get_sort_key, reverse=sort_by_date_forward)
+
