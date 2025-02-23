@@ -17,7 +17,6 @@ print(filter_by_state(test_lists, 'EXECUTED'))
 ''' The third test with other state'''
 print(filter_by_state(test_lists, 'CANCELED'))
 
-
 ''' Try to sort lists by default (True) '''
 print(sort_by_date(test_lists))
 
