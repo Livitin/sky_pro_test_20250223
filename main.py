@@ -1,5 +1,4 @@
-from src.processing.homework_functions import filter_by_state
-from src.processing.homework_functions import sort_by_date
+from src.processing.homework_functions import filter_by_state, sort_by_date
 
 print('Hello! Let\'s try to make operations')
 
@@ -12,18 +11,14 @@ test_lists = [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29
 print(filter_by_state(test_lists))
 
 ''' Second test when 'state' is 'EXECUTED' '''
-print(filter_by_state(test_lists),'EXECUTED')
+print(filter_by_state(test_lists), 'EXECUTED')
 
 ''' The third test with other state'''
-print(filter_by_state(test_lists),'CANCELED')
+print(filter_by_state(test_lists), 'CANCELED')
 
 
 ''' Try to sort lists by default (True) '''
 print(sort_by_date(test_lists))
 
 ''' Try to sort lists with sort option (for example False) '''
-print(sort_by_date(test_lists,'False'))
-
-
-
-
+print(sort_by_date(test_lists, False))
