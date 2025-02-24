@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 def filter_by_state(passed_lists: list[dict], state: str = 'EXECUTED') -> list[dict]:
     '''Функция принимает на вход список словарей с данными о банковских операциях и параметр
     state , возвращает новый список, содержащий только те словари, у которых ключ state
@@ -10,7 +9,6 @@ def filter_by_state(passed_lists: list[dict], state: str = 'EXECUTED') -> list[d
         if 'state' in tmp_list and tmp_list['state'] == state:
             result.append(tmp_list)
     return result
-
 
 def sort_by_date(passed_lists: list[dict], sort_by_date_forward: bool = True) -> list[dict]:
     '''Функция принимает на вход список словарей и параметр порядка сортировки,
