@@ -23,4 +23,4 @@ def sort_by_date(passed_lists: list[dict], sort_by_date_forward: bool = True) ->
         tmp_date_str = passed_list['date']
         return datetime.strptime(tmp_date_str, '%Y-%m-%dT%H:%M:%S.%f')
 
-    return sorted(passed_lists, key=get_sort_key, reverse=sort_by_date_forward)
+    return sorted(passed_lists, key=get_sort_key, reverse=not sort_by_date_forward)

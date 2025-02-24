@@ -20,5 +20,8 @@ print(filter_by_state(test_lists, 'CANCELED'))
 ''' Try to sort lists by default (True) '''
 print(sort_by_date(test_lists))
 
+''' Try to sort lists with sort option as True'''
+print(sort_by_date(test_lists, True))
+
 ''' Try to sort lists with sort option (for example False) '''
 print(sort_by_date(test_lists, False))
